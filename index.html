@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- PRIMEIRA PÁGINA -->
+        <section id="paginaCalculadora">
+
+            <h1>Calculadora de IMC</h1>
+
+            <form id="formulario">
+
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" required>
+
+                <label for="peso">Peso (kg):</label>
+                <input type="number" id="peso" step="any" min="0.1" required>
+
+                <label for="altura">Altura (m):</label>
+                <input type="number" id="altura" step="any" min="0.1" required>
+
+                <button type="submit">Calcular IMC</button>
+
+            </form>
+
+        </section>
+
+
+        <!-- SEGUNDA PÁGINA -->
+        <section id="paginaResultado" hidden>
+
+            <h1>Resultado do IMC</h1>
+
+            <div class="resultados-box">
+
+                <div class="item-resultado">
+                    <p><span>IMC</span></p>
+                    <h2 id="imcValor">-</h2>
+                </div>
+
+                <div class="item-resultado">
+                    <p><span>Classificação (adultos)</span></p>
+                    <h3 id="classificacao">-</h3>
+                </div>
+
+                <div class="item-resultado">
+                    <p><span>Faixa de referência (adultos)</span></p>
+                    <h3 id="faixaPeso">-</h3>
+                </div>
+
+            </div>
+
+            <button type="button" id="voltar">Voltar à calculadora</button>
+
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
